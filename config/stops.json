@@ -1,0 +1,369 @@
+{
+  "location": "Repulse Bay Road, outside Repulse Bay Villa (opp. 9 South Bay Road), Hong Kong",
+  "company": "CTB",
+  "routes": [
+    "6",
+    "6A",
+    "6X",
+    "63",
+    "65",
+    "66",
+    "73",
+    "260",
+    "973"
+  ],
+  "generatedAt": "2026-07-02T12:10:28.984Z",
+  "stops": [
+    {
+      "id": "002257",
+      "name_en": "Repulse Bay Villas, Repulse Bay Road",
+      "name_tc": "淺水灣別墅, 淺水灣道",
+      "lat": 22.238098772091,
+      "long": 114.19806596053,
+      "label": "Into Town",
+      "routes": [
+        {
+          "route": "6",
+          "dir": "I",
+          "dest_en": "Central (Exchange Square)",
+          "dest_tc": "中環 (交易廣場)"
+        },
+        {
+          "route": "6X",
+          "dir": "I",
+          "dest_en": "Central (Exchange Square)",
+          "dest_tc": "中環 (交易廣場)"
+        },
+        {
+          "route": "63",
+          "dir": "I",
+          "dest_en": "North Point Ferry Pier",
+          "dest_tc": "北角碼頭"
+        },
+        {
+          "route": "65",
+          "dir": "I",
+          "dest_en": "North Point Ferry Pier",
+          "dest_tc": "北角碼頭"
+        },
+        {
+          "route": "66",
+          "dir": "I",
+          "dest_en": "Central (Exchange Square)",
+          "dest_tc": "中環 (交易廣場)"
+        },
+        {
+          "route": "73",
+          "dir": "I",
+          "dest_en": "Cyberport",
+          "dest_tc": "數碼港"
+        },
+        {
+          "route": "260",
+          "dir": "I",
+          "dest_en": "Central (Exchange Square)",
+          "dest_tc": "中環 (交易廣場)"
+        },
+        {
+          "route": "973",
+          "dir": "I",
+          "dest_en": "Tsim Sha Tsui (Mody Road)",
+          "dest_tc": "尖沙咀 (麼地道)"
+        }
+      ]
+    },
+    {
+      "id": "002248",
+      "name_en": "Repulse Bay Towers, Repulse Bay Road",
+      "name_tc": "保華大廈, 淺水灣道",
+      "lat": 22.238416412091,
+      "long": 114.19875982053,
+      "label": "Towards Stanley",
+      "routes": [
+        {
+          "route": "6",
+          "dir": "O",
+          "dest_en": "Stanley Village",
+          "dest_tc": "赤柱村"
+        },
+        {
+          "route": "6A",
+          "dir": "O",
+          "dest_en": "Stanley Fort, Wong Ma Kok Road",
+          "dest_tc": "赤柱炮台, 黃麻角道"
+        },
+        {
+          "route": "6X",
+          "dir": "O",
+          "dest_en": "Stanley Village",
+          "dest_tc": "赤柱村"
+        },
+        {
+          "route": "63",
+          "dir": "O",
+          "dest_en": "Stanley Village",
+          "dest_tc": "赤柱村"
+        },
+        {
+          "route": "65",
+          "dir": "O",
+          "dest_en": "Stanley Village",
+          "dest_tc": "赤柱村"
+        },
+        {
+          "route": "66",
+          "dir": "O",
+          "dest_en": "Stanley Plaza",
+          "dest_tc": "赤柱廣場"
+        },
+        {
+          "route": "73",
+          "dir": "O",
+          "dest_en": "Stanley Village",
+          "dest_tc": "赤柱村"
+        },
+        {
+          "route": "260",
+          "dir": "O",
+          "dest_en": "Stanley Village",
+          "dest_tc": "赤柱村"
+        },
+        {
+          "route": "973",
+          "dir": "O",
+          "dest_en": "Stanley Village",
+          "dest_tc": "赤柱村"
+        }
+      ]
+    }
+  ],
+  "walkTimeMinutes": 5,
+  "gmb": {
+    "generatedAt": "2026-07-02T12:09:25.907Z",
+    "region": "HKI",
+    "keywords": [
+      "south bay road",
+      "repulse bay villa",
+      "repulse bay beach",
+      "belleview drive"
+    ],
+    "entries": [
+      {
+        "route_code": "40",
+        "route_id": 2001262,
+        "route_seq": 1,
+        "description_en": "Normal Route",
+        "stop_seq": 10,
+        "stop_id": 20008127,
+        "stop_name_en": "Repulse Bay Road, Repulse Bay Villa",
+        "stop_name_tc": "淺水灣道, 淺水灣別墅",
+        "lat": 22.237976477975657,
+        "long": 114.19791340827943,
+        "orig_en": "Stanley Village",
+        "dest_en": "Jardine's Bazaar",
+        "dest_tc": "渣甸街",
+        "side": "Into Town",
+        "displayLabel": "Into Town",
+        "matchedKeyword": "repulse bay villa"
+      },
+      {
+        "route_code": "40",
+        "route_id": 2001263,
+        "route_seq": 1,
+        "description_en": "Supplementary Service",
+        "stop_seq": 9,
+        "stop_id": 20008127,
+        "stop_name_en": "Repulse Bay Road, Repulse Bay Villa",
+        "stop_name_tc": "淺水灣道, 淺水灣別墅",
+        "lat": 22.237976477975657,
+        "long": 114.19791340827943,
+        "orig_en": "Ma Hang Estate",
+        "dest_en": "Jardine's Bazaar",
+        "dest_tc": "渣甸街",
+        "side": "Into Town",
+        "displayLabel": "Into Town",
+        "matchedKeyword": "repulse bay villa"
+      },
+      {
+        "route_code": "40",
+        "route_id": 2001262,
+        "route_seq": 2,
+        "description_en": "Normal Route",
+        "stop_seq": 10,
+        "stop_id": 20008118,
+        "stop_name_en": "Repulse Bay Road near South Bay Road",
+        "stop_name_tc": "淺水灣道, 近南灣道",
+        "lat": 22.23843538922777,
+        "long": 114.19864699244502,
+        "orig_en": "Jardine's Bazaar",
+        "dest_en": "Stanley Village",
+        "dest_tc": "赤柱村",
+        "side": "Towards Stanley",
+        "displayLabel": "Towards Stanley",
+        "matchedKeyword": "south bay road"
+      },
+      {
+        "route_code": "40X",
+        "route_id": 2001265,
+        "route_seq": 1,
+        "description_en": "Short Working Service",
+        "stop_seq": 11,
+        "stop_id": 20008127,
+        "stop_name_en": "Repulse Bay Road, Repulse Bay Villa",
+        "stop_name_tc": "淺水灣道, 淺水灣別墅",
+        "lat": 22.237976477975657,
+        "long": 114.19791340827943,
+        "orig_en": "Stanley Prison",
+        "dest_en": "Jardine's Bazaar",
+        "dest_tc": "渣甸街",
+        "side": "Into Town",
+        "displayLabel": "Into Town",
+        "matchedKeyword": "repulse bay villa"
+      },
+      {
+        "route_code": "40X",
+        "route_id": 2001265,
+        "route_seq": 2,
+        "description_en": "Short Working Service",
+        "stop_seq": 10,
+        "stop_id": 20008118,
+        "stop_name_en": "Repulse Bay Road, near South Bay Road",
+        "stop_name_tc": "淺水灣道, 近南灣道",
+        "lat": 22.23843538922777,
+        "long": 114.19864699244502,
+        "orig_en": "Jardine's Bazaar",
+        "dest_en": "Stanley Prison",
+        "dest_tc": "赤柱監獄",
+        "side": "Towards Stanley",
+        "displayLabel": "Towards Stanley",
+        "matchedKeyword": "south bay road"
+      },
+      {
+        "route_code": "52",
+        "route_id": 2005220,
+        "route_seq": 1,
+        "description_en": "Normal Departure",
+        "stop_seq": 11,
+        "stop_id": 20008118,
+        "stop_name_en": "Repulse Bay Road, near South Bay Road",
+        "stop_name_tc": "淺水灣道, 近南灣道",
+        "lat": 22.23843538922777,
+        "long": 114.19864699244502,
+        "orig_en": "ABERDEEN (YUE FAI ROAD)",
+        "dest_en": "STANLEY PRISON",
+        "dest_tc": "赤柱監獄",
+        "side": "Towards Stanley",
+        "displayLabel": "Towards Stanley",
+        "matchedKeyword": "south bay road"
+      },
+      {
+        "route_code": "52",
+        "route_id": 2005287,
+        "route_seq": 1,
+        "description_en": "Special Departure (From Cape Road)",
+        "stop_seq": 8,
+        "stop_id": 20012877,
+        "stop_name_en": "Repulse Bay Road, near Repulse Bay Villa",
+        "stop_name_tc": "淺水灣道, 近淺水灣別墅",
+        "lat": 22.238353391948102,
+        "long": 114.19868018478158,
+        "orig_en": "Stanley",
+        "dest_en": "ABERDEEN (YUE FAI ROAD)",
+        "dest_tc": "香港仔(漁暉道)",
+        "side": "Into Town",
+        "displayLabel": "Towards Aberdeen",
+        "matchedKeyword": "repulse bay villa"
+      },
+      {
+        "route_code": "52",
+        "route_id": 2005286,
+        "route_seq": 1,
+        "description_en": "Departures via Yue Fai Road",
+        "stop_seq": 11,
+        "stop_id": 20012877,
+        "stop_name_en": "Repulse Bay Road, near Repulse Bay Villa",
+        "stop_name_tc": "淺水灣道, 近淺水灣別墅",
+        "lat": 22.238353391948102,
+        "long": 114.19868018478158,
+        "orig_en": "STANLEY PRISON",
+        "dest_en": "ABERDEEN (YUE FAI ROAD)",
+        "dest_tc": "香港仔(漁暉道)",
+        "side": "Into Town",
+        "displayLabel": "Towards Aberdeen",
+        "matchedKeyword": "repulse bay villa"
+      },
+      {
+        "route_code": "52",
+        "route_id": 2005288,
+        "route_seq": 1,
+        "description_en": "Special Departure (Stanley Plaza)",
+        "stop_seq": 9,
+        "stop_id": 20012877,
+        "stop_name_en": "Repulse Bay Road, near Repulse Bay Villa",
+        "stop_name_tc": "淺水灣道, 近淺水灣別墅",
+        "lat": 22.238353391948102,
+        "long": 114.19868018478158,
+        "orig_en": "Stanley Plaza",
+        "dest_en": "ABERDEEN (YUE FAI ROAD)",
+        "dest_tc": "香港仔(漁暉道)",
+        "side": "Into Town",
+        "displayLabel": "Towards Aberdeen",
+        "matchedKeyword": "repulse bay villa"
+      },
+      {
+        "route_code": "52",
+        "route_id": 2005220,
+        "route_seq": 2,
+        "description_en": "Normal Departure",
+        "stop_seq": 11,
+        "stop_id": 20012877,
+        "stop_name_en": "Repulse Bay Road, near Repulse Bay Villa",
+        "stop_name_tc": "淺水灣道, 近淺水灣別墅",
+        "lat": 22.238353391948102,
+        "long": 114.19868018478158,
+        "orig_en": "STANLEY PRISON",
+        "dest_en": "ABERDEEN (YUE FAI ROAD)",
+        "dest_tc": "香港仔(漁暉道)",
+        "side": "Into Town",
+        "displayLabel": "Towards Aberdeen",
+        "matchedKeyword": "repulse bay villa"
+      },
+      {
+        "route_code": "N40",
+        "route_id": 2001264,
+        "route_seq": 1,
+        "description_en": "Overnight Service",
+        "stop_seq": 9,
+        "stop_id": 20008127,
+        "stop_name_en": "Repulse Bay Road, Repulse Bay Villa",
+        "stop_name_tc": "淺水灣道, 淺水灣別墅",
+        "lat": 22.237976477975657,
+        "long": 114.19791340827943,
+        "orig_en": "Stanley Village",
+        "dest_en": "Jardine's Bazaar",
+        "dest_tc": "渣甸街",
+        "side": "Into Town",
+        "displayLabel": "Into Town",
+        "matchedKeyword": "repulse bay villa"
+      },
+      {
+        "route_code": "N40",
+        "route_id": 2001264,
+        "route_seq": 2,
+        "description_en": "Overnight Service",
+        "stop_seq": 10,
+        "stop_id": 20008118,
+        "stop_name_en": "Repulse Bay Road, near South Bay Road",
+        "stop_name_tc": "淺水灣道, 近南灣道",
+        "lat": 22.23843538922777,
+        "long": 114.19864699244502,
+        "orig_en": "Jardine's Bazaar",
+        "dest_en": "Stanley Village",
+        "dest_tc": "赤柱村",
+        "side": "Towards Stanley",
+        "displayLabel": "Towards Stanley",
+        "matchedKeyword": "south bay road"
+      }
+    ]
+  }
+}

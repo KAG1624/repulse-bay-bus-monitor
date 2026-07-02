@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>Repulse Bay Bus Monitor — Routes Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+  <style>
+    html, body { height: 100%; }
+    .map-page { display: flex; flex-direction: column; height: 100dvh; }
+    .map-topbar {
+      padding: 10px 18px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(11, 14, 20, 0.9);
+    }
+    .map-topbar-row { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+    .map-topbar h1 { font-size: 17px; font-weight: 700; }
+    .map-topbar h1 a { color: var(--accent); text-decoration: none; }
+    .map-note { color: var(--text-faint); font-size: 12px; line-height: 1.45; margin-top: 4px; }
+    .map-body { flex: 1; display: flex; min-height: 0; }
+    .map-index {
+      width: 250px;
+      flex: none;
+      overflow-y: auto;
+      border-right: 1px solid var(--line);
+      background: var(--bg-raise);
+      padding: 12px;
+    }
+    .map-index h2 {
+      font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-faint);
+      margin: 10px 6px 6px;
+    }
+    .map-index h2:first-child { margin-top: 2px; }
+    .route-row {
+      display: flex; align-items: center; gap: 10px;
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      background: none;
+      color: var(--text-dim);
+      font-size: 13.5px;
+      text-align: left;
+      cursor: pointer;
+    }
+    .route-row:hover { border-color: var(--line); color: var(--text); }
+    .route-row.active { background: var(--bg-card); border-color: var(--accent); color: var(--text); }
+    .route-row.loading { opacity: 0.55; }
+    .route-row.loading .row-dest::after { content: " …drawing"; color: var(--text-faint); }
+    .map-status { font-size: 12.5px; color: var(--text-faint); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .route-row .row-badge {
+      min-width: 44px;
+      padding: 3px 8px;
+      border-radius: 9px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 14px;
+      color: #10141f;
+      flex: none;
+    }
+    .route-row.gmb .row-badge { border-radius: 999px; box-shadow: 0 0 0 2px rgba(143, 196, 166, 0.55); }
+    .route-row .row-dest {
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    #map { flex: 1; min-height: 0; background: #0b0e14; }
+    .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+      background: var(--bg-card); color: var(--text);
+    }
+    .leaflet-popup-content { font-size: 13px; line-height: 1.5; margin: 12px 16px; }
+    .popup-title { font-weight: 700; margin-bottom: 4px; }
+    .popup-eta { font-variant-numeric: tabular-nums; color: var(--text-dim); }
+    .popup-eta b { color: var(--text); }
+    .stop-marker {
+      display: grid; place-items: center;
+      width: 28px; height: 28px; border-radius: 50%;
+      font-weight: 800; font-size: 12px; color: #10141f;
+      border: 2px solid #0b0e14;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .stop-marker.ctb { background: var(--accent); }
+    .stop-marker.gmb { background: var(--gmb); border-radius: 9px; }
+    @media (max-width: 760px) {
+      .map-body { flex-direction: column; }
+      .map-index {
+        width: 100%;
+        max-height: 32vh;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+      .map-note { display: none; }
+      .map-note.open { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <div class="map-page">
+    <header class="map-topbar">
+      <div class="map-topbar-row">
+        <h1><a href="./">← Dashboard</a> · Routes map</h1>
+        <button id="noteToggle" class="reliability-toggle" style="padding:3px 10px;font-size:12px">what am I looking at?</button>
+        <span id="mapStatus" class="map-status" role="status"></span>
+      </div>
+      <p class="map-note" id="mapNote">
+        Blue = city bus stop pole, green = minibus stop pole. Tap a marker to
+        see live arrival countdowns for that pole (same ETA data as the main
+        dashboard, refreshed every ~60s). Note: the government transit APIs
+        only publish arrival-time predictions, not bus GPS coordinates — so
+        this map shows fixed stop locations with live countdowns, not moving
+        bus icons. Pick a route from the list to draw its full path along the
+        roads, with every stop from start to finish.
+      </p>
+    </header>
+    <div class="map-body">
+      <nav class="map-index" id="routeIndex" aria-label="Routes"></nav>
+      <div id="map"></div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="map.js"></script>
+</body>
+</html>
