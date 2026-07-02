@@ -318,11 +318,15 @@ body {
 .walk-chip {
   display: inline-block;
   margin-top: 6px;
-  padding: 3px 10px;
+  padding: 3px 9px;
   border-radius: 999px;
-  font-size: clamp(12px, 1.3vw, 14px);
+  font-size: clamp(11px, 1.15vw, 13px);
   font-weight: 700;
   border: 1px solid transparent;
+  line-height: 1.4;
+}
+.walk-chip.go, .walk-chip.soon {
+  white-space: nowrap;
 }
 .walk-chip.go {
   background: var(--eta-green);
