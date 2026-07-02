@@ -1,0 +1,26 @@
+services:
+  busmonitor:
+    build: .
+    container_name: repulse-bay-bus-monitor
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+    ports:
+      - "127.0.0.1:3000:3000"
+    networks:
+      - busmonitor_net
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512M
+        reservations:
+          memory: 128M
+
+networks:
+  busmonitor_net:
+    name: repulse-bay-bus-monitor_net
+    driver: bridge

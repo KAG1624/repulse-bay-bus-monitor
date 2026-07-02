@@ -12,7 +12,7 @@
     "260",
     "973"
   ],
-  "generatedAt": "2026-07-02T12:10:28.984Z",
+  "generatedAt": "2026-07-02T13:26:22.721Z",
   "stops": [
     {
       "id": "002257",
@@ -139,7 +139,7 @@
   ],
   "walkTimeMinutes": 5,
   "gmb": {
-    "generatedAt": "2026-07-02T12:09:25.907Z",
+    "generatedAt": "2026-07-02T13:27:00.364Z",
     "region": "HKI",
     "keywords": [
       "south bay road",
@@ -258,24 +258,6 @@
       },
       {
         "route_code": "52",
-        "route_id": 2005287,
-        "route_seq": 1,
-        "description_en": "Special Departure (From Cape Road)",
-        "stop_seq": 8,
-        "stop_id": 20012877,
-        "stop_name_en": "Repulse Bay Road, near Repulse Bay Villa",
-        "stop_name_tc": "淺水灣道, 近淺水灣別墅",
-        "lat": 22.238353391948102,
-        "long": 114.19868018478158,
-        "orig_en": "Stanley",
-        "dest_en": "ABERDEEN (YUE FAI ROAD)",
-        "dest_tc": "香港仔(漁暉道)",
-        "side": "Into Town",
-        "displayLabel": "Towards Aberdeen",
-        "matchedKeyword": "repulse bay villa"
-      },
-      {
-        "route_code": "52",
         "route_id": 2005286,
         "route_seq": 1,
         "description_en": "Departures via Yue Fai Road",
@@ -286,6 +268,24 @@
         "lat": 22.238353391948102,
         "long": 114.19868018478158,
         "orig_en": "STANLEY PRISON",
+        "dest_en": "ABERDEEN (YUE FAI ROAD)",
+        "dest_tc": "香港仔(漁暉道)",
+        "side": "Into Town",
+        "displayLabel": "Towards Aberdeen",
+        "matchedKeyword": "repulse bay villa"
+      },
+      {
+        "route_code": "52",
+        "route_id": 2005287,
+        "route_seq": 1,
+        "description_en": "Special Departure (From Cape Road)",
+        "stop_seq": 8,
+        "stop_id": 20012877,
+        "stop_name_en": "Repulse Bay Road, near Repulse Bay Villa",
+        "stop_name_tc": "淺水灣道, 近淺水灣別墅",
+        "lat": 22.238353391948102,
+        "long": 114.19868018478158,
+        "orig_en": "Stanley",
         "dest_en": "ABERDEEN (YUE FAI ROAD)",
         "dest_tc": "香港仔(漁暉道)",
         "side": "Into Town",
