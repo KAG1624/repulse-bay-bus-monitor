@@ -1,3 +1,11 @@
+# Coding Guidance Handoff — 4 October 2026
+
+Shared coding instructions now use maintained AGENTS.md and the exact real CLAUDE.md
+import bridge. Original project instructions and the prior handoff below are preserved.
+This was guidance-only work; no application, deployment, data or runtime changes.
+Read `/opt/hive/docs/AGENT_GUIDANCE_ROLLOUT_2026-10-04.md` for verification, publication
+and pending Claude login/session adoption. Historical instructions below retain their dates.
+
 # SESSION HANDOFF — Repulse Bay Bus Monitor
 
 Running log. Agents append to / update this at the end of every session.

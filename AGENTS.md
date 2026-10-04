@@ -1,3 +1,38 @@
+# repulse-bay-bus-monitor — Shared Coding Guidance
+
+This file provides guidance to coding agents when working with code in this repository.
+
+Scope: `/opt/repulse-bay-bus-monitor` and its children, except any explicitly narrower coding scope.
+
+## Shared Coding Workflow
+
+This is the personal VPS `Personal_VPS-ale` (`srv1596163`), not the company VPS.
+Use the personal working agreements loaded through `/home/ale/.codex/AGENTS.md` or
+`/home/ale/.claude/CLAUDE.md`; the maintained user source is
+`/home/ale/.config/agent-guidance/AGENTS.md`. The master procedure and rollout record live
+in `/opt/hive/docs/AGENT_GUIDANCE_STANDARD.md` and `/opt/hive/docs/AGENT_GUIDANCE_ROLLOUT_2026-10-04.md`.
+A Mac-hosted SSH chat must explicitly read these remote instructions before work.
+
+Maintain AGENTS.md as the shared coding source. Same-directory CLAUDE.md is a real file
+containing exactly `@./AGENTS.md` plus one newline. Preserve actual application provider
+names and runtime decisions. Historical approvals and dated handoffs are not current
+permission to run production operations. Read the current applicable handoff before edits.
+
+Inspect branch, HEAD, staging and worktrees. Reread targets and compare hashes before writes;
+reconcile changed content. Never stash, reset, restore, clean, switch branches, kill another
+session, amend another person's commit, force-push, or stage someone else's files. Use named
+paths only, never broad staging. Recheck HEAD, index and locks at commit time; inspect hooks
+and deployment triggers before pushing. Preserve existing file ownership and credentials.
+Worktree owners adopt guidance through Git; never overwrite their checkout copies.
+
+Validate changed coding scopes with `/opt/hive/scripts/check_agent_guidance.py`.
+Guidance checks need no build, deployment, restart, live database write, live-agent call,
+message, credential refresh or backup run. Use action-disabled fresh sessions for loading
+checks and name unavailable authentication/access checks honestly. Shared files do not
+transfer private chat history, tool-specific skills or permissions between coding agents.
+
+## Preserved Project Instructions
+
 # AGENTS.md — Repulse Bay Bus Monitor
 
 ## Overview
